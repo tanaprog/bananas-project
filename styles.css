@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #3A1111;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    height: 832px;
+}
+
+.main-content {
+    padding: 40px 52px 40px 80px;
+}
+
+.main-content__logo {
+    margin-bottom: 179px;
+}
+
+.nugget {
+    margin-bottom: -13px;
+}
+
+.main-content__title {
+    margin-bottom: 42px;
+}
+
+.main-content__text {
+    margin-bottom: 42px;
+    font-size: 16px;
+}
+
+/* BUTTONS */
+
+.content-buttons__locations {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    overflow: hidden;
+    border-radius: 100px;
+    margin-bottom: 21px;
+}
+
+.location-input {
+    border: none;
+    width: 535px;
+    padding: 20px;
+    padding-left: 28px;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.location-button {
+    border: none;
+    background-color: transparent;
+}
+
+.location-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding-right: 32px;
+}
+
+/*  SEND button*/
+
+
+.choose__send {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.send-form {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 260px;
+    padding: 18px;
+    border-radius: 100px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+/****/
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 260px;
+    padding: 18px;
+    border: 1px solid var(--primary-color);
+    border-radius: 100px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: var(--primary-color);
+}
+
+/* Navigation MENU*/
+
+.content-menu__navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: absolute;
+    padding: 40px 80px 10px 22px;
+}
+
+
+.navigation__menu {
+    display: flex;
+    margin-top: -8px;
+    margin-left: 10px;
+}
+
+.menu-link {
+    padding: 8px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+
+.menu-link:hover {
+    font-weight: bold;
+}
+
+
+.nav-btn {
+    display: none;
+}
+
+
+@media (max-width: 1150px) {
+
+    body {
+        max-width: 90%;
+    } 
+
+    .nav-btn {
+        font-size: 2em;
+        padding-inline: 10px;
+        padding-bottom: 3px;
+        border: none;
+        background-color: white;
+        display: block;
+        cursor: pointer;
+    }
+
+    .navigation__menu {
+        display: none;
+    }
+
+    
+    .photo {
+        display: none;
+    }
+}
+
+/* .drop:hover .navigation__menu {
+    display: block;
+    position: absolute;
+    background-color: #b89618;
+} */
+
+.login {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 70px;
+    padding: 5px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background-color: var(--primary-color);
+    margin-left: 10px;
+}
+
+
+@media (max-width: 800px) {
+
+body {
+    max-width: 90%;
+}
+
+    .content-menu__navigation {
+        padding: 30px 5px;
+    }
+
+    .main-content {
+        max-width: 70%;
+        font-size: 14px;
+        padding-left: 40px;
+    }
+
+    .title__name {
+        max-width: 80%;
+    }
+
+    .main-content__text {
+        max-width: 90%;
+        font-size: 14px;
+    }
+
+    .content-buttons__locations {
+        max-width: 90%;
+    }
+
+    .content-buttons__choose {
+        max-width: 90%;
+    }
+
+    .content-menu {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .main-content {
+        max-width: 70%;
+        font-size: 14px;
+    }
+
+    .main-content {
+        max-width: 80%;
+        font-size: 14px;
+        padding-left: 40px;
+    }
+
+    .title__name {
+        max-width: 70%;
+    }
+
+    .main-content__text {
+        max-width: 90%;
+    }
+
+    .content-buttons__locations {
+        max-width: 90%;
+    }
+
+    .content-buttons__choose {
+        max-width: 90%;
+    }
+
+    .location-input {
+        padding: 15px;
+    }
+
+    .send-form {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 10px;
+    }
+}
