@@ -7,10 +7,13 @@
 
 :root {
     --primary-color: #3A1111;
+    --white: #fff;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
+    max-width: 100%;
+    min-width: 320px;
 }
 
 .main {
@@ -49,17 +52,19 @@ body {
     border: 1px solid var(--primary-color);
     overflow: hidden;
     border-radius: 100px;
-    margin-bottom: 21px;
+    margin-bottom: 25px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.37)
 }
 
 .location-input {
     border: none;
-    width: 535px;
+    width: 537px;
     padding: 20px;
     padding-left: 28px;
     outline: none;
     font-size: 16px;
     background-color: transparent;
+    ;
 }
 
 .location-button {
@@ -77,7 +82,6 @@ body {
 
 /*  SEND button*/
 
-
 .choose__send {
     display: flex;
     align-items: center;
@@ -93,13 +97,11 @@ body {
     border-radius: 100px;
     font-size: 16px;
     line-height: 24px;
-    color: #fff;
+    color: var(--white);
     letter-spacing: 0.1em;
     border: 1px solid var(--primary-color);
     background-color: var(--primary-color);
 }
-
-/****/
 
 .btn {
     display: inline-block;
@@ -120,11 +122,11 @@ body {
 .content-menu__navigation {
     display: flex;
     justify-content: space-between;
+    text-align: center;
     gap: 20px;
     position: absolute;
-    padding: 40px 80px 10px 22px;
+    padding: 50px 22px 40px 22px;
 }
-
 
 .navigation__menu {
     display: flex;
@@ -133,18 +135,29 @@ body {
 }
 
 .menu-link {
-    padding: 8px;
+    padding: 10px 10px;
     padding-left: 20px;
     text-decoration: none;
     color: var(--primary-color);
     font-size: 16px;
 }
 
-
 .menu-link:hover {
     font-weight: bold;
 }
 
+.login {
+    display: inline-block;
+    text-decoration: none;
+    width: 70px;
+    padding: 8px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    color: var(--white);
+    background-color: var(--primary-color);
+    margin-left: 10px;
+}
 
 .nav-btn {
     display: none;
@@ -153,13 +166,18 @@ body {
 
 @media (max-width: 1150px) {
 
-    body {
-        max-width: 90%;
-    } 
+    .content-menu__navigation {
+        padding: 30px 10px;
+    }
+
+    .main {
+        display: flex;
+        justify-content: flex-start;
+    }
 
     .nav-btn {
         font-size: 2em;
-        padding-inline: 10px;
+        padding-inline: 8px;
         padding-bottom: 3px;
         border: none;
         background-color: white;
@@ -171,47 +189,32 @@ body {
         display: none;
     }
 
-    
-    .photo {
+    .content-menu__picture {
         display: none;
     }
-}
 
-/* .drop:hover .navigation__menu {
-    display: block;
-    position: absolute;
-    background-color: #b89618;
-} */
+    .drop:hover .navigation__menu {
+        display: block;
+        position: absolute;
+        right: 1px;
+    }
 
-.login {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    width: 70px;
-    padding: 5px;
-    border-radius: 12px;
-    border: none;
-    font-size: 16px;
-    color: white;
-    background-color: var(--primary-color);
-    margin-left: 10px;
+    .content-menu__navigation {
+        position: absolute;
+        right: 50px;
+    }
 }
 
 
 @media (max-width: 800px) {
 
-body {
-    max-width: 90%;
-}
-
     .content-menu__navigation {
-        padding: 30px 5px;
+        padding: 30px 10px;
     }
 
     .main-content {
         max-width: 70%;
         font-size: 14px;
-        padding-left: 40px;
     }
 
     .title__name {
@@ -234,13 +237,23 @@ body {
     .content-menu {
         max-width: 90%;
     }
+
+    .location-input {
+        padding: 15px;
+    }
+
+    .send-form {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 600px) {
-
-    .main-content {
-        max-width: 70%;
-        font-size: 14px;
+    .content-menu__navigation {
+        padding: 30px 10px;
     }
 
     .main-content {
@@ -275,5 +288,9 @@ body {
 
     .btn {
         padding: 10px;
+    }
+
+    .drop {
+        padding-right: -100px;
     }
 }
