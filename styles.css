@@ -192,10 +192,14 @@ body {
         font-size: 14px;
     }
 
+    .nav-btn {
+        position: absolute;
+    }
+
     .burger-line {
         position: absolute;
-        top: 47px;
-        right: 50px;
+        top: 37px;
+        right: 90px;
         width: 35px;
         height: 3px;
         background-color: black;
@@ -203,18 +207,20 @@ body {
 
     .second,
     .third {
-        top: 56px;
+        top: 18px;
     }
 
     .fourth {
-        top: 66px;
+        top: 27px;
     }
 
     .navigation__menu {
-        padding-right: 25px;
+        display: none;
+        padding-right: 60px;
+        padding-top: 50px;
     }
 
-    
+
 
     /* .navigation__menu {
         display: block;
@@ -263,15 +269,10 @@ body {
     .nav-btn {
         font-size: 2em;
         padding-inline: 8px;
-        padding-bottom: 50px;
         border: none;
         background-color: white;
         display: block;
         cursor: pointer;
-    }
-
-    .navigation__menu {
-        display: none;
     }
 
     .content-menu__picture {
@@ -343,6 +344,7 @@ body {
     }
 }
 
+
 @media (max-width: 600px) {
     .content-menu__navigation {
         padding: 30px 10px;
@@ -364,6 +366,14 @@ body {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .burger-line {
+        right: 40px;
+    }
+
+    .navigation__menu {
+        padding-right: 15px;
     }
 
     .title__name {
