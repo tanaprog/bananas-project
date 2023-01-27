@@ -11,18 +11,24 @@
 }
 
 body {
-    height: 100%;
-    /* height: 100vh; */
     font-family: 'Poppins', sans-serif;
-    max-width: 100%;
     min-width: 320px;
 }
 
 .main {
     display: flex;
     justify-content: space-between;
-    height: 832px;
 }
+
+/* .content-menu {
+    height: 100vh;
+}
+
+.photo {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+} */
 
 .main-content {
     padding: 40px 52px 40px 80px;
@@ -49,6 +55,7 @@ body {
     font-size: 16px;
 }
 
+
 /* BUTTONS */
 
 .content-buttons__locations {
@@ -70,7 +77,6 @@ body {
     outline: none;
     font-size: 16px;
     background-color: transparent;
-    ;
 }
 
 .location-button {
@@ -127,10 +133,6 @@ body {
 /* Navigation MENU*/
 
 .content-menu__navigation {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    gap: 20px;
     position: absolute;
     padding: 50px 22px 40px 22px;
 }
@@ -169,166 +171,98 @@ body {
     display: none;
 }
 
+.navigation__menu-1 {
+    display: none;
+}
+
 
 @media (max-width: 1150px) {
 
-    .content-menu__navigation {
-        padding: 30px 10px;
-    }
-
-
-    .title__name {
-        display: flex;
-        justify-content: center;
-    }
-
-    .text-about {
-        display: flex;
-        justify-content: center;
+    .main-content {
+        padding: 40px 75px;
     }
 
     .main-content__logo {
-        max-width: 60%;
-        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wraper {
+        padding-left: 100px;
+    }
+
+    .content-buttons__locations {
+        max-width: 90%;
+    }
+
+    .content-buttons__choose {
+        max-width: 90%;
+    }
+
+    .drop {
+        position: relative;
     }
 
     .nav-btn {
         position: absolute;
+        top: 8px;
+        right: 8px;
     }
 
     .burger-line {
-        position: absolute;
-        top: 37px;
-        right: 90px;
+        margin: 5px;
         width: 35px;
         height: 3px;
         background-color: black;
     }
 
-    .second,
-    .third {
-        top: 18px;
-    }
-
-    .fourth {
-        top: 27px;
-    }
-
-    .navigation__menu {
-        display: none;
-        padding-right: 60px;
-        padding-top: 50px;
-    }
-
-
-
-    /* .navigation__menu {
-        display: block;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        transform: translateY(100%);
-        max-height: 0;
-        font-size: 0;
-        overflow: hidden;
-        transition: .5s all;
-    }
-
-    #check-menu:checked ~ .navigation__menu {
-        max-height: 500px;
-        font-size: 16px;
-    }
-
-    .menu-link {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        color: var(--primary-color);
-        text-decoration: none;
-
-    }
-
-    #check-menu:checked ~ .first {
-        display: none;
-    }
-
-    #check-menu:checked ~ .second {
-        transform: rotate(45deg);
-    }
-
-    #check-menu:checked ~ .third {
-        transform: rotate(-45deg);
-    }
-
-    #check-menu:checked ~ .fourth {
-        display: none;
-    } */
-
-
     .nav-btn {
         font-size: 2em;
-        padding-inline: 8px;
         border: none;
         background-color: white;
         display: block;
         cursor: pointer;
     }
 
-    .content-menu__picture {
+    .content-menu {
         display: none;
     }
 
-    .drop:hover .navigation__menu {
+    .drop:hover .navigation__menu-1 {
         display: block;
         position: absolute;
-        right: 1px;
-    }
-
-    .content-menu__navigation {
-        position: absolute;
-        right: 50px;
+        text-align: center;
+        right: -10px;
+        top: 35px;
     }
 }
 
 
 @media (max-width: 800px) {
 
-    .content-menu__navigation {
-        padding: 30px 10px;
+    .main-content {
+        max-width: 80%;
+        padding: 40px 75px;
     }
 
-    .title__name {
-        max-width: 70%;
+    .wraper {
+        padding-left: 120px;
     }
 
     .main-content__text {
-        max-width: 70%;
-        font-size: 14px;
+        max-width: 80%;
     }
 
     .title__name {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .text-about {
-        display: flex;
-        justify-content: center;
+        max-width: 80%;
     }
 
     .content-buttons__locations {
-        max-width: 70%;
+        max-width: 80%;
     }
 
-    .choose__send {
-        max-width: 70%;
-    }
-
-    .content-menu {
-        max-width: 70%;
+    .content-buttons__choose {
+        max-width: 80%;
     }
 
     .location-input {
@@ -346,54 +280,35 @@ body {
 
 
 @media (max-width: 600px) {
-    .content-menu__navigation {
-        padding: 30px 10px;
-    }
 
     .main-content {
-        max-width: 90%;
-        font-size: 14px;
-        padding-left: 40px;
+        max-width: 60%;
+        padding: 40px 75px;
     }
 
-    .title__name {
-        display: flex;
-        justify-content: center;
-    }
-
-    .text-about {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    .wraper {
+        padding-left: 50px;
     }
 
     .burger-line {
         right: 40px;
     }
 
-    .navigation__menu {
-        padding-right: 15px;
-    }
-
     .title__name {
-        max-width: 70%;
-    }
-
-    .main-content__text {
-        max-width: 70%;
+        max-width: 85%;
+        font-size: 1.6em;
     }
 
     .content-buttons__locations {
-        max-width: 70%;
+        max-width: 100%;
     }
 
-    .choose__send {
-        max-width: 70%;
+    .content-buttons__choose {
+        max-width: 100%;
     }
 
     .location-input {
-        padding: 15px;
+        padding: 15px 8px;
     }
 
     .send-form {
@@ -401,10 +316,6 @@ body {
     }
 
     .btn {
-        padding: 10px;
-    }
-
-    .drop {
-        padding-right: -100px;
+        padding: 10px 5px;
     }
 }
